@@ -30,7 +30,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              {
+                "input": "./node_modules/tailwindcss/tailwind.css"
+              }
             ],
             "scripts": []
           },
@@ -93,12 +97,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              {
+                "input": "./node_modules/tailwindcss/tailwind.css"
+              }
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d97b6722-0320-4360-84e9-39b654858127"
   }
 }
