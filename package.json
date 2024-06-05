@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "predeploy": "ng build --base-href=https://sergiutigan.github.io/vertical-moto/",
+    "predeploy": "ng build --base-href=/vertical-moto/",
     "deploy": "gh-pages -d dist/vertical-moto"
   },
   "private": true,
