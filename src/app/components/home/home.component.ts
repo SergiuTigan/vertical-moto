@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IMoto } from '../../interfaces/moto.interface';
+import { MotorcycleService } from '../../services/motorcycle.service';
 
 @Component({
   selector: 'app-home',
@@ -6,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  carouselItems: number[] = Array.from({ length: 5 }, (_, i) => Number(`${i + 1}`));
-  currentItem = 1;
+  motos: IMoto[] = [];
 
-  constructor() {
+  constructor(private motorcycleService: MotorcycleService) {
   }
 
   ngOnInit() {
-
+    this.motorcycleService.getMotorcycles().subscribe((data: IMoto[]) => {
+      this.motos = data;
+    });
   }
-
 }
