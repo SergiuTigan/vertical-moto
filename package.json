@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "ng build --base-href=/vertical-moto/ && echo 'royalenfield.tigan.dev' > dist/vertical-moto/CNAME",
+    "deploy": "gh-pages -d dist/vertical-moto"
   },
   "private": true,
   "dependencies": {
@@ -26,15 +28,16 @@
     "@angular-devkit/build-angular": "^17.3.8",
     "@angular/cli": "~17.3.8",
     "@angular/compiler-cli": "^17.3.10",
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "@types/jasmine": "~4.3.0",
+    "gh-pages": "^6.1.1",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.5",
-    "@fortawesome/fontawesome-free": "^6.5.2",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typescript": "~5.4.5"
   }
 }
